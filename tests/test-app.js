@@ -23,15 +23,3 @@ describe('GET /', () => {
   });
 });
 
-describe('POST /', () => {
-    it('should fail with error', (done) => {
-        chai.request(app)
-            .post('/')
-            .end((err, res) => {
-                res.status.should.equal(200);
-                // the response should be JSON
-                //res.type.should.equal('text/plain');
-                done();
-            });
-    });
-});
